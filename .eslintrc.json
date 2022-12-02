@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "unused-imports"
+  ],
+  "rules": {
+    "jsx-a11y/alt-text": "off",
+    "semi": "warn",
+    "quotes": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/no-anonymous-default-export": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
+            "^react",
+            "^[^@]?\\w",
+            "^@?\\w"
+          ],
+          [
+            "^(components|pages)",
+            "^\\u0000",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            "^.+\\.s?css$"
+          ]
+        ]
+      }
+    ]
+  }
+}
