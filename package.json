@@ -1,7 +1,7 @@
 {
   "name": "scm-templator-viewer",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://haroldxing.github.io/scm-templator-viewer",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-components": "^2.3.35",
