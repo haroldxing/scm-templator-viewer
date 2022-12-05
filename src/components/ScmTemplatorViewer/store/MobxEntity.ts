@@ -1,4 +1,3 @@
-import { groupBy } from "lodash";
 import { makeAutoObservable } from "mobx";
 
 import { Entity } from "../types";
@@ -13,7 +12,4 @@ export class MobxEntity {
     makeAutoObservable(this);
   }
 
-  get relationByAttributeName() {
-    return groupBy(this.entity.relations, "referenceAttr");
-  }
 }
