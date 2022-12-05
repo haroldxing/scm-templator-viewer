@@ -13,8 +13,10 @@ export const ScmTemplatorViewer = observer(() => {
   };
   return (
     <>
-      <EntitiesList entities={templatorStore.entities} />
-      <FileSelector onChange={handleFileChange} className="fixed right-4 bottom-4 bg-white" />
+      <div className="flex divide-x overflow-x-auto">
+        <EntitiesList entities={templatorStore.entities} />
+      </div>
+      <FileSelector className="fixed right-4 bottom-4 bg-white" onChange={handleFileChange} />
     </>
   );
 });
